@@ -28,6 +28,7 @@ CREATE TABLE `inquire` (
   `vid` INT NOT NULL,
   `uid` INT NOT NULL,
   `question` VARCHAR(300) NULL,
+  `inquire_time` TIMESTAMP NOT NULL DEFAULT current_timestamp,
   PRIMARY KEY (`qid`),
   FOREIGN KEY (`vid`) REFERENCES `videoInfo` (`vid`),
   FOREIGN KEY (`uid`) REFERENCES `userInfo` (`uid`)
